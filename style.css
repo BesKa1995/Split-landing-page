@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto:wght@400;500&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 0.625rem;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.container {
+  background-color: #333;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  transition: width 1s ease;
+}
+
+.split h1 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.split.left {
+  background: url("https://media.wired.com/photos/609b2e011e530f82d2c5ba8f/master/pass/games_ps5_anniversary.jpg") no-repeat center/cover;
+}
+
+.split.left .btn {
+  border-color: #4919da;
+}
+
+.split.left .btn:hover {
+  background-color: #4919da;
+  border-color: #4919da;
+}
+
+.split.left::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #4919da74;
+}
+
+.split.right {
+  right: 0;
+  background: url("https://prem-market.com/media/2020/09/Series-X.jpeg") no-repeat top/cover;
+}
+
+.split.right .btn {
+  border-color: #469d46;
+}
+
+.split.right .btn:hover {
+  background-color: #469d46;
+  border-color: #469d46;
+}
+
+.split.right::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #23232674;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  border: .3rem solid #fff;
+  width: 16rem;
+  height: 6rem;
+  padding: 1.5rem;
+}
+
+.hover-left .left {
+  width: 75%;
+}
+
+.hover-left .right {
+  width: 25%;
+}
+
+.hover-right .right {
+  width: 75%;
+}
+
+.hover-right .left {
+  width: 25%;
+}
+
+@media (max-width: 75em) {
+  .split h1 {
+    top: 30%;
+    font-size: 2.5rem;
+  }
+  .btn {
+    font-size: 1.8rem;
+    padding: 1.2rem;
+    width: 12rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
